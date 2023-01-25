@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<head> 
+    <meta charset="UTF-8">
+    <title>Nostrad</title>
+    <link rel="stylesheet" href="{% static 'css\\style.css' %}">
+</head>
+<body>
+    <nav class="topBar">
+        <ul>
+            <li><a href="">HOME</a></li>
+            <li><a href={% url "mainpage-upcoming" %}>UPCOMING MOVIES</a></li>
+        </ul>
+    </nav>
+    <div id="content">
+        <h1>NOSTRAD</h1>
+        <div id="mainBloc">
+            <!-- <form method="POST" action="">
+                {% csrf_token %}
+                <label for="title">TITLE:</label>
+                <input type="text" id="title" name="title">
+                <br>
+                <br>
+                <label for="duration">DURATION:</label>
+                <input type="text" id="duration" name="duration">
+                <br>
+                <br>
+                <label for="genre">GENRE(S):</label>
+                <select id="genre" name="genre">
+                    <option value="Action">Action</option>
+                    <option value="Comedy">Comedy</option>
+                    <option value="Drama">Drama</option>
+                    <option value="Horror">Horror</option>
+                    <option value="Science fiction">Science fiction</option>
+                </select>
+                <br><br><br>
+                <input id="submit" type="submit" value="Submit">
+            </form>
+            <div id ="rightResult" {% if showRight %}style="display:block;"{% endif %}>
+                <h2>{{title}}</h2>
+                <div id="moviePic"></div>
+            </div> -->
+            <h2>
+                Welcome, into Nostrad. Let's see the upcoming movies and give your opinion about them. I will
+                try to gess if you gave a positive or negative opinion !
+            </h2>
+        </div>
+        <p id="fooText">Created for IT Project</p>
+    </div>
+</body>
+</html>

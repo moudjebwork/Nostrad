@@ -1,0 +1,153 @@
+@font-face {
+    font-family: Bebas;
+    src: url("fonts\\bebas_neue.ttf");
+}
+
+body{
+    background-color: #363B48;
+    height : 100vh;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+}
+
+nav {
+    width: 80%;
+    margin: 0 auto;
+}
+
+nav ul {
+  list-style: none;
+  text-align: center;
+  display: flex;
+}
+nav ul li {
+  display: inline-block;
+  flex-basis: 50%;
+}
+
+
+li a{
+    color: white;
+    font-family: 'Roboto';
+    text-decoration: none;
+    position: relative;
+    font-family: bold;
+    font-family: 'Roboto';
+}
+
+li a:hover{
+    color:#FF0000;
+}
+
+li a::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    border-radius: 4px;
+    background-color: #FF0000;
+    bottom: 0;
+    left: 0;
+    transform-origin: right;
+    transform: scaleX(0);
+    
+    transition: transform .3s ease-in-out;
+}
+
+li a:hover::before {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+h2{
+    color: #FF0000;
+    text-align: center;
+    font-style: bold;
+    text-shadow: 4px 4px 2px rgba(0, 0, 0, 0.25);
+    font-family: Roboto,Arial;
+}
+
+/* NEW */
+
+#paper {
+	color:#FFF;
+	font-size:20px;
+}
+#text {
+	width:500px;
+	overflow:hidden;
+	background-color:#FFF;
+	color:#222;
+	font-family:Courier, monospace;
+	font-weight:normal;
+	font-size:24px;
+	resize:none;
+	line-height:40px;
+	padding-left:100px;
+	padding-right:100px;
+	padding-top:45px;
+	padding-bottom:34px;
+	background-image:url(https://static.tumblr.com/maopbtg/E9Bmgtoht/lines.png), url(https://static.tumblr.com/maopbtg/nBUmgtogx/paper.png);
+	background-repeat:repeat-y, repeat;
+	-webkit-border-radius:12px;
+	border-radius:12px;
+	-webkit-box-shadow: 0px 2px 14px #000;
+	box-shadow: 0px 2px 14px #000;
+	border-top:1px solid #FFF;
+	border-bottom:1px solid #FFF;
+}
+#title {
+	background-color:transparent;
+	border-bottom:3px solid #FFF;
+	color:#FFF;
+	font-size:20px;
+	font-family:Courier, monospace;
+	height:28px;
+	font-weight:bold;
+	width:220px;
+}
+#button {
+	cursor:pointer;
+	margin-top:20px;
+	float:right;
+	height:40px;
+	padding-left:24px;
+	padding-right:24px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-weight:bold;
+	font-size:20px;
+	color:white;
+	text-shadow: 0px -1px 0px #000000;
+	-webkit-border-radius:8px;
+	border-radius:8px;
+	border-top:1px solid #FFF;
+	-webkit-box-shadow: 0px 2px 14px #000;
+	box-shadow: 0px 2px 14px #000;
+	background-image:url(https://static.tumblr.com/maopbtg/ZHLmgtok7/button.png);
+	background-repeat:repeat-x;
+}
+#button:active {
+	zoom: 1;
+	filter: alpha(opacity=80);
+	opacity: 0.8;
+}
+#button:focus {
+	zoom: 1;
+	filter: alpha(opacity=80);
+	opacity: 0.8;
+}
+#wrapper {
+	width:700px;
+	height:auto;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:24px;
+	margin-bottom:100px;
+}
+
+h3{
+	font-size: 20px;
+	font-family: Roboto, Helvetica, Arial;
+	color : white;
+}

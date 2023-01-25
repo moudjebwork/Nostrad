@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="{% static 'css\\upcoming.css' %}">
+    </head>
+    <body> 
+        <nav class="topBar">
+            <ul>
+                <li><a href="/">HOME</a></li>
+                <li><a href={% url "mainpage-upcoming" %}>UPCOMING MOVIES</a></li>
+            </ul>
+        </nav>
+        <div id="content">
+            <h2>They are comming...</h2>
+            <form id="movieCont">
+                {%for m in movies%}
+                        <div id="movieCard">
+                            <div id="imageCard">
+                                <a href="{% url 'mainpage-review'%}?movieName={{m.0}}"> <img src='http://image.tmdb.org/t/p/w500/{{m.1}}'></a>
+                            </div>
+                            <p id="title">{{m.0}}</p>
+                        </div>
+                {% endfor %}
+                </form>
+        </div>     
+    </body>
+</html>

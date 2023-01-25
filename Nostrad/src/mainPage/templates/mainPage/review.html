@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'css\\review.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <nav class="topBar">
+        <ul>
+            <li><a href="/">HOME</a></li>
+            <li><a href={% url "mainpage-upcoming" %}>UPCOMING MOVIES</a></li>
+        </ul>
+    </nav>
+    <h2>Welcome to the review page of the movie {{movieName}}</h2>
+    <div id="wrapper">
+        <form id="paper" method="post" action="{% url 'mainpage-review'%}?movieName={{movieName}}">
+            {% csrf_token %}
+            <textarea placeholder="Enter something funny." id="text" name="sentence" rows="4" style="overflow: hidden; word-wrap: break-word; resize: none; height: 160px; "></textarea>  
+            <br>
+            <input id="button" type="submit" value="Try">
+        </form>
+        <br>
+        {%if isSentence %}
+            {%if sentence == 1%}
+                <h3>This is a <span style="color:#7AA95C">positive</span> opinion !</h3>
+            {%else%}
+                <h3>This is a <span style="color:#FF0000">negative</span> opinion !</h3>
+            {%endif%}
+        {%endif%}
+    </div>
+</body>
+</html>

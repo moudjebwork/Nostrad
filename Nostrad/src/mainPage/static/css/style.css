@@ -1,0 +1,188 @@
+@font-face {
+    font-family: Bebas;
+    src: url("fonts\\bebas_neue.ttf");
+}
+
+body{
+    background-color: #363B48;
+    height : 100vh;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+}
+
+nav {
+    width: 80%;
+    margin: 0 auto;
+}
+
+nav ul {
+  list-style: none;
+  text-align: center;
+  display: flex;
+}
+nav ul li {
+  display: inline-block;
+  flex-basis: 50%;
+}
+
+
+a{
+    color: white;
+    font-family: 'Roboto';
+    text-decoration: none;
+    position: relative;
+    font-family: bold;
+    font-family: 'Roboto';
+}
+
+a:hover{
+    color:#FF0000;
+}
+
+a::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    border-radius: 4px;
+    background-color: #FF0000;
+    bottom: 0;
+    left: 0;
+    transform-origin: right;
+    transform: scaleX(0);
+    
+    transition: transform .3s ease-in-out;
+}
+
+a:hover::before {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+
+
+h1{
+    transition: all 0.5s ease;
+    color: #FF0000;
+    font-family: Bebas,Roboto,Arial;
+    font-size: 60px;
+    text-align: center;
+    font-style: bold;
+    text-shadow: 4px 4px 2px rgba(0, 0, 0, 0.25);
+}
+
+#content{
+    width: 100%;
+    flex-basis: 95%;
+}
+
+
+#mainBloc{
+    width: 70%;
+    margin: auto;
+    padding: 10px;
+    /* background-color: #A7001E; */
+    /* border : 1px solid white; */
+    color: #E2E9C0;
+    font-family: Roboto,Arial;
+    display: flex;
+    border-radius: 5px;
+    text-align: center;
+}
+
+form{
+    padding-top: 10px;
+    margin: auto;
+    font-family: Roboto,BebasNeue, Arial;
+    font-style: bold;
+    font-size: 18px;
+    color:white;
+}
+
+#submit{
+    font-family: Roboto;
+    text-transform: uppercase;
+    font-style: bold;
+    font-size: 17px;
+    float: right;
+    background-color: #E2E9C0;
+    border: 1px solid black;
+}
+
+
+label{
+    display: block;
+    width: 150px;
+    float: left;
+}
+
+#rightResult{
+    border-left : 2px dashed white;
+    width : 50%;
+    height: 80%;
+    display:none;
+}
+
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-moz-keyframes fadein { /* sur Firefox */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-webkit-keyframes fadein { /* sur Safari et Chrome */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-o-keyframes fadein { /* sur Opera */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/*h2{
+    text-align: center;
+    font-family: Roboto;
+    color: white;
+    font-style: bold;
+    text-transform: uppercase;
+    animation: fadein 2s;
+} */
+
+#moviePic{
+    height: 277px;
+    width: 200px;
+    background: url("images\\popCorn.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation: fadein 2s;
+    -moz-animation: fadein 2s; /* Firefox */
+    -webkit-animation: fadein 2s; /* Safari et Chrome */
+    -o-animation: fadein 2s; /* Opera */
+    
+    margin: 0 auto 0 auto;
+}
+
+#fooText{
+    text-align: center;
+    color: white;
+    font-family: Roboto,Arial;
+    text-decoration: underline;
+}
