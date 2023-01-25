@@ -82,7 +82,7 @@ y = data.label.values
 x=tfidf.fit_transform(data.text)
 
 vect = tfidf.fit(data.text)
-with open ("fVectorizerNotoken", "wb") as saveFile:
+with open ("fVectorizer", "wb") as saveFile:
     pickle.dump(vect, saveFile)
 
 X_train,X_test,y_train,y_test=train_test_split(x,y,random_state=1,test_size=0.5,shuffle=False)
@@ -96,5 +96,5 @@ y_pred = clf.predict(X_test)
 print("Test accuracy...")
 print("Accuracy:",metrics.accuracy_score(y_test, y_pred))
 
-with open ("classifierNotoken", "wb") as saveFile:
+with open ("classifier", "wb") as saveFile:
     pickle.dump(clf, saveFile)
